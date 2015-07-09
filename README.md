@@ -7,7 +7,7 @@ The goal of this project is to visualize the gender gap data for the Groovy comm
 
 ## Contributions
 
-To contribute, please submit a pull request(PR) with your company's data added to the `data.json` file in `/src/assets/data`.  You don't need to fork, clone, etc the repository, you can add to the file via the github text editor.  When viewing the file, click the pencil icon on the right hand side of the page.  At the bottom of the page, there are prompts to setup a PR directly from the editor.
+To contribute, please submit a pull request(PR) with your company's data added to the [`data.json`](/src/assets/data/data.json) file in `/src/assets/data`.  You don't need to fork, clone, etc the repository, you can add to the file via the github text editor.  When viewing the file, click the pencil icon on the right hand side of the page or go directly [here](https://github.com/jlstrater/gr8ladies-d3/edit/master/src/assets/data/data.json).  At the bottom of the page, there are prompts to setup a PR directly from the editor.
 
 ### Example
 Not all fields are required, but it should look something like this.
@@ -33,7 +33,7 @@ If you don't feel comfortable submitting the company's name, you can submit unde
 
 Only the name field is required. The other fields are optional and based on what you are able to contribute.  Also, if you or someone at your company does not identify as male or female, I am happy to modify the code to include a new field name of your choosing.
 
-- totalMen/totalWomen includes all employees of your organization(or department)
+- totalMen/totalWomen includes all employees of your organization(or department) who identify as men, women, etc.
 - leadership includes anyone who manages other employees
 - developers can include anyone who writes code, but the company should be doing something Groovy related (Groovy, Grails, Griffon, Gradle, etc).
 - QA includes both manual QA and test engineers. Please note that this means that test engineers fit into both Developer and QA roles and the numbers may or may not line up with the total of the organization.
