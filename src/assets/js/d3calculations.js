@@ -1,0 +1,104 @@
+var w = 200;
+var h = 200;
+var r = h/2;
+var color = d3.scale.ordinal()
+                .range(["#FF66CC", "#66CCFF", "#CCFF66"]);
+
+var data,
+    totalWomen,
+    totalMen,
+    totalNonBinary,
+    totalEmployees,
+    totalWomenInLeadership,
+    totalMenInLeadership,
+    totalNonBinaryInLeadership,
+    totalInLeadership,
+    femaleDevelopers,
+    maleDevelopers,
+    nonBinaryDevelopers,
+    femaleQA,
+    maleQa,
+    nonBinaryQA;
+
+var totals,
+    leadershipTotals;
+
+var graphPieChart = function(selector, dataValues) {
+
+
+    var vis = d3.select(selector).append("svg:svg").data([dataValues]).attr("width", w).attr("height", h).append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
+    var pie = d3.layout.pie().value(function(d){return d.value;});
+
+    // declare an arc generator function
+    var arc = d3.svg.arc().outerRadius(r);
+
+    // select paths, use arc generator to draw
+    var arcs = vis.selectAll("g.slice").data(pie).enter().append("svg:g").attr("class", "slice");
+    arcs.append("svg:path")
+        .attr("fill", function(d, i){
+            return color(i);
+        })
+        .attr("d", function (d) {
+            return arc(d);
+        });
+
+    var legend = d3.select(selector).append("svg")
+          .attr("class", "legend")
+          .attr("width", r * 2)
+          .attr("height", r * 2)
+        .selectAll("g")
+          .data(color.domain().slice().reverse())
+        .enter().append("g")
+          .attr("transform", function(d, i) { if(dataValues[i].value > 0 ) { return "translate(0," + i * 20 + ")"; }});
+
+      legend.append("rect")
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", color);
+
+      legend.append("text")
+          .attr("x", 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .text(function(d, i) { if(dataValues[d].value > 0) { return dataValues[d].label + '(' + dataValues[d].count + ') -- ' + dataValues[d].value + '%'; }});
+}
+
+d3.json("assets/data/data.json", function(error, data) {
+    totalWomen = _.sum(_.pluck(data, 'totalWomen'));
+    totalMen = _.sum(_.pluck(data, 'totalMen'));
+    totalNonBinary = _.sum(_.pluck(data, 'totalNonBinary'));
+    totalEmployees = totalWomen + totalMen + totalNonBinary;
+    totalWomenInLeadership = _.sum(_.pluck(data, 'leadershipWomen'));
+    totalMenInLeadership = _.sum(_.pluck(data, 'leadershipMen'));
+    totalNonBinaryInLeadership = _.sum(_.pluck(data, 'leadershipNonBinary'));
+    totalInLeadership = totalMenInLeadership + totalWomenInLeadership + totalNonBinaryInLeadership;
+    femaleDevelopers = _.sum(_.pluck(data, 'developersWomen'));
+    maleDevelopers = _.sum(_.pluck(data, 'developersMen'));
+    nonBinaryDevelopers = _.sum(_.pluck(data, 'developersNonBinary'));
+    totalDevelopers = maleDevelopers + femaleDevelopers + nonBinaryDevelopers;
+    femaleQA = _.sum(_.pluck(data, 'qaWomen'));
+    maleQA = _.sum(_.pluck(data, 'qaMen'));
+    nonBinaryQA = _.sum(_.pluck(data, 'nonBinaryQA'));
+    totalQA = maleQA + femaleQA + nonBinaryQA;
+
+    totals = [{"label": "Women", "value":  Math.round(totalWomen/totalEmployees * 100 * 10) / 10, "count": totalWomen},
+      {"label": "Men", "value": Math.round(totalMen/totalEmployees * 100 * 10) / 10, "count": totalMen},
+      {"label": "Non-binary Gender Identity", "value": Math.round(totalNonBinary/totalEmployees * 100 * 10) / 10, "count": totalNonBinary}];
+
+    leadershipTotals = [{"label": "Women", "value":  Math.round(totalWomenInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalWomenInLeadership},
+      {"label": "Men", "value": Math.round(totalMenInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalMenInLeadership},
+      {"label": "Non-binary Gender Identity", "value": Math.round(totalNonBinaryInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalNonBinaryInLeadership}];
+
+    developerTotals =  [{"label": "Women", "value":  Math.round(femaleDevelopers/totalDevelopers * 100 * 10) / 10, "count": femaleDevelopers},
+      {"label": "Men", "value": Math.round(maleDevelopers/totalDevelopers * 100 * 10) / 10, "count": maleDevelopers},
+      {"label": "Non-binary Gender Identity", "value": Math.round(nonBinaryDevelopers/totalDevelopers * 100 * 10) / 10, "count": nonBinaryDevelopers}];
+
+    qaTotals =  [{"label": "Women", "value":  Math.round(femaleQA/totalQA * 100 * 10) / 10, "count": femaleQA},
+      {"label": "Men", "value": Math.round(maleQA/totalQA * 100 * 10) / 10, "count": maleQA},
+      {"label": "Non-binary Gender Identity", "value": Math.round(nonBinaryQA/totalQA * 100 * 10) / 10, "count": nonBinaryQA}];
+
+    graphPieChart('#pieChartTotals', totals);
+    graphPieChart('#pieChartLeadership', leadershipTotals);
+    graphPieChart('#pieChartDevelopers', developerTotals);
+    graphPieChart('#pieChartQA', qaTotals);
+});

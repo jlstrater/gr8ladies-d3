@@ -1,0 +1,33 @@
+{
+  "name": "gr8ladies-d3",
+  "version": "0.0.1",
+  "description": "Gr8Ladies gender gap visualization",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlstrater/gr8ladies-d3.git"
+  },
+  "keywords": [
+    "gr8ladies",
+    "d3",
+    "gender gap",
+    "data vis"
+  ],
+  "author": "Jennifer Strater",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/jlstrater/gr8ladies-d3/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-shell": "~0.3.1"
+  }
+}
