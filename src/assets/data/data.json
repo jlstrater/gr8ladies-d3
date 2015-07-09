@@ -10,7 +10,8 @@
     "qaMen": 0,
     "qaWomen": 1,
     "lastUpdated": "08-JUL-2015",
-    "source": "https://objectpartners.com/people/"
+    "source": "https://objectpartners.com/people/",
+    "country": "USA"
   },
   {
     "name": "Anonymous Previous Employer",
@@ -21,6 +22,7 @@
     "qaMen": 0,
     "qaWomen": 1,
     "lastUpdated": "08-JUL-2015",
-    "source": "I worked there"
+    "source": "I worked there",
+    "country": "USA"
   }
 ]
