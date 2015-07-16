@@ -39,4 +39,4 @@ Only the name field is required. The other fields are optional and based on what
 - QA includes both manual QA and test engineers. Please note that this means that test engineers fit into both Developer and QA roles and the numbers may or may not line up with the total of the organization.
 
 ### Important!
-It is very important to submit your data even if your company doesn't have any women.  The charts are based on aggregate date so it's important to have everyone accounted for or the numbers will be skewed upwards. 
+It is very important to submit your data even if your company doesn't have any women.  The charts are based on aggregate data so it's important to have everyone accounted for or the numbers will be skewed. 
