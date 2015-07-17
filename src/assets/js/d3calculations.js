@@ -16,15 +16,18 @@ var data,
     femaleDevelopers,
     maleDevelopers,
     nonBinaryDevelopers,
+    totalDevelopers,
     femaleQA,
-    maleQa,
+    maleQA,
+    totalQA,
     nonBinaryQA;
 
 var totals,
-    leadershipTotals;
+    leadershipTotals,
+    developerTotals,
+    qaTotals;
 
 var graphPieChart = function(selector, dataValues) {
-
 
     var vis = d3.select(selector).append("svg:svg").data([dataValues]).attr("width", w).attr("height", h).append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
     var pie = d3.layout.pie().value(function(d){return d.value;});
@@ -61,6 +64,47 @@ var graphPieChart = function(selector, dataValues) {
           .attr("y", 9)
           .attr("dy", ".35em")
           .text(function(d, i) { if(dataValues[d].value > 0) { return dataValues[d].label + '(' + dataValues[d].count + ') -- ' + dataValues[d].value + '%'; }});
+};
+
+var graphTable = function (selector, top5, rankName) {
+    var table = d3.select(selector).append("table"),
+        thead = table.append("thead"),
+        tbody = table.append("tbody");
+
+    // append the header row
+    thead.append("tr")
+        .selectAll("th")
+        .data(['Name','Percentage Women'])
+        .enter()
+        .append("th")
+        .text(function(column) { return column; });
+
+    // create a row for each object in the data
+    var rows = tbody.selectAll("tr")
+        .data(top5)
+        .enter()
+        .append("tr");
+
+    // create a cell in each row for each column
+    var cells = rows.selectAll("td")
+        .data(function(row) {
+           return [{ column: 'name', value: row['name']},
+               { column: 'percentage', value: row[rankName] }];
+        })
+        .enter()
+        .append("td")
+        .attr("style", "font-family: Courier") // sets the font style
+        .html(function(d) { return d.value; });
+
+    return table;
+};
+
+var formatPercentage = function(ratio) {
+    return Math.round(ratio * 100 * 10)/ 10;
+};
+
+var checkIfValueExists = function(value) {
+    return value || 0;
 }
 
 d3.json("assets/data/data.json", function(error, data) {
@@ -81,24 +125,64 @@ d3.json("assets/data/data.json", function(error, data) {
     nonBinaryQA = _.sum(_.pluck(data, 'nonBinaryQA'));
     totalQA = maleQA + femaleQA + nonBinaryQA;
 
-    totals = [{"label": "Women", "value":  Math.round(totalWomen/totalEmployees * 100 * 10) / 10, "count": totalWomen},
+    totals = [{"label": "Women", "value":  formatPercentage(totalWomen/totalEmployees), "count": totalWomen},
       {"label": "Men", "value": Math.round(totalMen/totalEmployees * 100 * 10) / 10, "count": totalMen},
-      {"label": "Non-binary Gender Identity", "value": Math.round(totalNonBinary/totalEmployees * 100 * 10) / 10, "count": totalNonBinary}];
+      {"label": "Non-binary Gender Identity", "value": formatPercentage(totalNonBinary/totalEmployees), "count": totalNonBinary}];
 
-    leadershipTotals = [{"label": "Women", "value":  Math.round(totalWomenInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalWomenInLeadership},
-      {"label": "Men", "value": Math.round(totalMenInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalMenInLeadership},
-      {"label": "Non-binary Gender Identity", "value": Math.round(totalNonBinaryInLeadership/totalInLeadership * 100 * 10) / 10, "count": totalNonBinaryInLeadership}];
+    leadershipTotals = [{"label": "Women", "value":  formatPercentage(totalWomenInLeadership/totalInLeadership), "count": totalWomenInLeadership},
+      {"label": "Men", "value": formatPercentage(totalMenInLeadership/totalInLeadership), "count": totalMenInLeadership},
+      {"label": "Non-binary Gender Identity", "value": formatPercentage(totalNonBinaryInLeadership/totalInLeadership), "count": totalNonBinaryInLeadership}];
 
-    developerTotals =  [{"label": "Women", "value":  Math.round(femaleDevelopers/totalDevelopers * 100 * 10) / 10, "count": femaleDevelopers},
-      {"label": "Men", "value": Math.round(maleDevelopers/totalDevelopers * 100 * 10) / 10, "count": maleDevelopers},
-      {"label": "Non-binary Gender Identity", "value": Math.round(nonBinaryDevelopers/totalDevelopers * 100 * 10) / 10, "count": nonBinaryDevelopers}];
+    developerTotals =  [{"label": "Women", "value": formatPercentage(femaleDevelopers/totalDevelopers), "count": femaleDevelopers},
+      {"label": "Men", "value": formatPercentage(maleDevelopers/totalDevelopers), "count": maleDevelopers},
+      {"label": "Non-binary Gender Identity", "value": formatPercentage(nonBinaryDevelopers/totalDevelopers), "count": nonBinaryDevelopers}];
 
-    qaTotals =  [{"label": "Women", "value":  Math.round(femaleQA/totalQA * 100 * 10) / 10, "count": femaleQA},
-      {"label": "Men", "value": Math.round(maleQA/totalQA * 100 * 10) / 10, "count": maleQA},
-      {"label": "Non-binary Gender Identity", "value": Math.round(nonBinaryQA/totalQA * 100 * 10) / 10, "count": nonBinaryQA}];
+    qaTotals =  [{"label": "Women", "value":  formatPercentage(femaleQA/totalQA), "count": femaleQA},
+      {"label": "Men", "value": formatPercentage(maleQA/totalQA), "count": maleQA},
+      {"label": "Non-binary Gender Identity", "value": formatPercentage(nonBinaryQA/totalQA), "count": nonBinaryQA}];
 
     graphPieChart('#pieChartTotals', totals);
     graphPieChart('#pieChartLeadership', leadershipTotals);
     graphPieChart('#pieChartDevelopers', developerTotals);
     graphPieChart('#pieChartQA', qaTotals);
+
+    _.each(data, function (company) {
+        var totalEmployees = checkIfValueExists(company.totalWomen) + checkIfValueExists(company.totalMen) + checkIfValueExists(company.totalNonBinary);
+        company.totalPercentageWomen = totalEmployees ? formatPercentage(checkIfValueExists(company.totalWomen) /
+                (totalEmployees)) : 0;
+        var totalLoadership = checkIfValueExists(company.leadershipWomen) + checkIfValueExists(company.leadershipMen) + checkIfValueExists(company.leadershipNonBinary);
+        company.leadershipPercentageWomen = totalLoadership ? formatPercentage(checkIfValueExists(company.leadershipWomen) /
+                (totalLoadership)) : 0;
+        var totalDevelopers = checkIfValueExists(company.developersWomen) + checkIfValueExists(company.developersMen) + checkIfValueExists(company.developersNonBinary);
+        company.developersPercentageWomen = totalDevelopers ? formatPercentage(checkIfValueExists(company.developersWomen) /
+                (totalDevelopers)) : 0;
+        var totalQA = checkIfValueExists(company.qaWomen) + checkIfValueExists(company.qaMen) + checkIfValueExists(company.qaNonBinary);
+        company.qaPercentageWomen = totalQA ? formatPercentage(checkIfValueExists(company.qaWomen) /
+                (totalQA)) : 0;
+    });
+
+    if(_.compact(_.pluck(data, 'totalPercentageWomen')).length < 5) {
+        d3.select('#tableTotals').text('Fewer than 5 Companies Reporting. Please consider contributing.');
+    } else {
+        var topFiveTotalWomen = _.sortByOrder(data, 'totalPercentageWomen', 'desc').slice(0, 5);
+        graphTable('#tableTotals', topFiveTotalWomen, 'totalPercentageWomen');
+    }
+    if(_.compact(_.pluck(data, 'leadershipPercentageWomen')).length < 5) {+
+        d3.select('#tableLeadership').text('Fewer than 5 Companies Reporting. Please consider contributing.');
+    } else {
+        var topFiveLeadershipWomen = _.sortByOrder(data, 'leadershipPercentageWomen', 'desc').slice(0,5);
+        graphTable('#tableLeadership', topFiveLeadershipWomen, 'leadershipPercentageWomen');
+    }
+    if(_.compact(_.pluck(data, 'developersPercentageWomen')).length < 5) {
+        d3.select('#tableDevelopers').text('Fewer than 5 Companies Reporting. Please consider contributing.');
+    } else {
+        var topFiveDevelopersWomen = _.sortByOrder(data, 'developersPercentageWomen', 'desc').slice(0,5);
+        graphTable('#tableDevelopers', topFiveDevelopersWomen, 'developersPercentageWomen');
+    }
+    if(_.compact(_.pluck(data, 'qaPercentageWomen')).length < 5) {
+        d3.select('#tableQA').text('Fewer than 5 Companies Reporting. Please consider contributing.');
+    } else {
+        var topFiveQaWomen = _.sortByOrder(data, 'qaPercentageWomen', 'desc').slice(0,5);
+        graphTable('#tableQA', topFiveQaWomen, 'qaPercentageWomen');
+    }
 });
