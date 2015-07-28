@@ -53,7 +53,7 @@
     "source": "Employee",
     "country": "Austrailia"
   },
-   {
+  {
     "name": "ReachForce",
     "totalMen": 25,
     "totalWomen": 11,
@@ -65,6 +65,26 @@
     "qaWomen": 1,
     "lastUpdated": "27-JUL-2015",
     "source": "Employee",
+    "country": "USA"
+  },
+  {
+    "name": "Kaleidos",
+    "totalMen": 20,
+    "totalWomen": 3,
+    "leadershipMen": 3,
+    "leadershipWomen": 0,
+    "developersMen": 18,
+    "developersWomen": 2,
+    "source": "http://kaleidos.net/",
+    "country": "Spain"
+  },
+  {
+    "name": "SpanTree",
+    "totalMen": 7,
+    "totalWomen": 2,
+    "developersMen": 7,
+    "developersWomen": 1,
+    "source": "http://www.spantree.net/team",
     "country": "USA"
   }
 ]
