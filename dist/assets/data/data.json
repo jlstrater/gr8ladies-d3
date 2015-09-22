@@ -86,5 +86,19 @@
     "developersWomen": 1,
     "source": "http://www.spantree.net/team",
     "country": "USA"
+  },
+  {
+    "name": "SmartThings",
+    "totalMen": 136,
+    "totalWomen": 23,
+    "leadershipMen": 13,
+    "leadershipWomen": 1,
+    "developersMen": 53,
+    "developersWomen": 1,
+    "qaMen": 7,
+    "qaWomen": 4,
+    "source": "employee",
+    "country": "USA",
+    "lastUpdated": "22-SEP-2015"
   }
 ]
