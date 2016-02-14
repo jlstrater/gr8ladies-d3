@@ -107,7 +107,7 @@ var checkIfValueExists = function(value) {
     return value || 0;
 }
 
-d3.json("assets/data/data.json", function(error, data) {
+d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/assets/data/data.json", function(error, data) {
     totalWomen = _.sum(_.pluck(data, 'totalWomen'));
     totalMen = _.sum(_.pluck(data, 'totalMen'));
     totalNonBinary = _.sum(_.pluck(data, 'totalNonBinary'));
