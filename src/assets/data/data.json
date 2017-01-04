@@ -1,28 +1,16 @@
 [
   {
     "name": "Object Partners, Inc.",
-    "totalMen": 102,
-    "totalWomen": 11,
-    "leadershipMen": 8,
-    "leadershipWomen": 5,
-    "developersMen": 93,
-    "developersWomen": 4,
+    "totalMen": 105,
+    "totalWomen": 7,
+    "leadershipMen": 11,
+    "leadershipWomen": 4,
+    "developersMen": 97,
+    "developersWomen": 2,
     "qaMen": 0,
     "qaWomen": 1,
-    "lastUpdated": "13-02-2016",
+    "lastUpdated": "04-JAN-2017",
     "source": "https://objectpartners.com/people/",
-    "country": "USA"
-  },
-  {
-    "name": "Anonymous Previous Employer",
-    "leadershipMen": 1,
-    "leadershipWomen": 0,
-    "developersMen": 5,
-    "developersWomen": 1,
-    "qaMen": 0,
-    "qaWomen": 1,
-    "lastUpdated": "08-JUL-2015",
-    "source": "I worked there",
     "country": "USA"
   },
   {
@@ -69,23 +57,27 @@
   },
   {
     "name": "Kaleidos",
-    "totalMen": 20,
-    "totalWomen": 3,
+    "totalMen": 17,
+    "totalWomen": 4,
     "leadershipMen": 3,
     "leadershipWomen": 0,
-    "developersMen": 18,
-    "developersWomen": 2,
+    "developersMen": 15,
+    "developersWomen": 3,
     "source": "http://kaleidos.net/",
-    "country": "Spain"
+    "country": "Spain",
+    "lastUpdated": "04-JAN-2017"
   },
   {
     "name": "SpanTree",
-    "totalMen": 7,
-    "totalWomen": 2,
-    "developersMen": 7,
-    "developersWomen": 1,
+    "totalMen": 8,
+    "totalWomen": 3,
+    "leadershipMen": 1,
+    "leadershipWomen": 1,
+    "developersMen": 8,
+    "developersWomen": 2,
     "source": "http://www.spantree.net/team",
-    "country": "USA"
+    "country": "USA",
+    "lastUpdated": "04-JAN-2017"
   },
   {
     "name": "SmartThings",
