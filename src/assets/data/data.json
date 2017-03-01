@@ -106,5 +106,19 @@
     "source": "Employee",
     "country": "US",
     "lastUpdated": "03-NOV-2015"
+  },
+  {
+    "name": "Zenjob",
+    "totalMen": 18,
+    "totalWomen": 10,
+    "leadershipMen": 0,
+    "leadershipWomen": 0,
+    "developersMen": 5,
+    "developersWomen": 0,
+    "qaMen": 0,
+    "qaWomen": 0,
+    "lastUpdated": "01-MARCH-2017",
+    "source": "https://www.zenjob.de/uber-uns",
+    "country": "DE"
   }
 ]

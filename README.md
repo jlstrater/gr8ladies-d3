@@ -40,3 +40,19 @@ Only the name field is required. The other fields are optional and based on what
 
 ### Important!
 It is very important to submit your data even if your company doesn't have any women.  The charts are based on aggregate data so it's important to have everyone accounted for or the numbers will be skewed. 
+
+### For building from source
+
+####Grunt Commands
+* `grunt assemble`
+  * Minify/uglify the javascript source and css
+  * Compiles jade
+  * Stages everything in the dist folder
+* `grunt run`
+  * Starts a server running on port 8000
+  * watches for changes on project files
+  * When files change, the assemble task is re-run and
+  * Livereload triggers browser update on assemble task completion
+* `grunt publish`
+  * Publishes slides to GitHub pages
+  * Uses git subtree merge to merge the contents of dist into the gh-pages branch
