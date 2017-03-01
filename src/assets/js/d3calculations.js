@@ -105,7 +105,7 @@ var formatPercentage = function(ratio) {
 
 var checkIfValueExists = function(value) {
     return value || 0;
-}
+};
 
 d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/assets/data/data.json", function(error, data) {
     totalWomen = _.sum(_.pluck(data, 'totalWomen'));
@@ -185,4 +185,68 @@ d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/ass
         var topFiveQaWomen = _.sortByOrder(data, 'qaPercentageWomen', 'desc').slice(0,5);
         graphTable('#tableQA', topFiveQaWomen, 'qaPercentageWomen');
     }
+});
+
+d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/assets/data/opensource_data.json", function(error, data) {
+    totalWomen = _.sum(_.pluck(data, 'totalWomen'));
+    totalMen = _.sum(_.pluck(data, 'totalMen'));
+    totalNonBinary = _.sum(_.pluck(data, 'totalNonBinary'));
+    totalContributors = totalWomen + totalMen + totalNonBinary;
+    totalWomenInLeadership = _.sum(_.pluck(data, 'leadershipWomen'));
+    totalMenInLeadership = _.sum(_.pluck(data, 'leadershipMen'));
+    totalNonBinaryInLeadership = _.sum(_.pluck(data, 'leadershipNonBinary'));
+    totalInLeadership = totalMenInLeadership + totalWomenInLeadership + totalNonBinaryInLeadership;
+    commitsFromWomen = _.sum(_.pluck(data, 'commitsFromWomen'));
+    commitsFromMen = _.sum(_.pluck(data, 'commitsFromMen'));
+    commitsFromNonBinary = _.sum(_.pluck(data, 'commitsFromNonBinary'));
+    totalCommits = maleDevelopers + femaleDevelopers + nonBinaryDevelopers;
+
+    totals = [{"label": "Women", "value":  formatPercentage(totalWomen/totalContributors), "count": totalWomen},
+        {"label": "Men", "value": Math.round(totalMen/totalContributors * 100 * 10) / 10, "count": totalMen},
+        {"label": "Non-binary Gender Identity", "value": formatPercentage(totalNonBinary/totalContributors), "count": totalNonBinary}];
+
+    leadershipTotals = [{"label": "Women", "value":  formatPercentage(totalWomenInLeadership/totalInLeadership), "count": totalWomenInLeadership},
+        {"label": "Men", "value": formatPercentage(totalMenInLeadership/totalInLeadership), "count": totalMenInLeadership},
+        {"label": "Non-binary Gender Identity", "value": formatPercentage(totalNonBinaryInLeadership/totalInLeadership), "count": totalNonBinaryInLeadership}];
+
+    developerTotals =  [{"label": "Women", "value": formatPercentage(commitsFromWomen/totalCommits), "count": commitsFromWomen},
+        {"label": "Men", "value": formatPercentage(commitsFromMen/totalCommits), "count": commitsFromMen},
+        {"label": "Non-binary Gender Identity", "value": formatPercentage(commitsFromNonBinary/totalCommits), "count": commitsFromNonBinary}];
+
+    graphPieChart('#pieChartTotalForProjects', totals);
+    graphPieChart('#pieChartLeadershipProjects', leadershipTotals);
+    graphPieChart('#pieChartCommits', developerTotals);
+
+    _.each(data, function (project) {
+        var totalContributors = checkIfValueExists(project.totalWomen) + checkIfValueExists(project.totalMen) + checkIfValueExists(project.totalNonBinary);
+        project.totalPercentageWomen = totalContributors ? formatPercentage(checkIfValueExists(project.totalWomen) /
+            (totalContributors)) : 0;
+        var totalLoadership = checkIfValueExists(project.leadershipWomen) + checkIfValueExists(project.leadershipMen) + checkIfValueExists(project.leadershipNonBinary);
+        project.leadershipPercentageWomen = totalLoadership ? formatPercentage(checkIfValueExists(project.leadershipWomen) /
+            (totalLoadership)) : 0;
+        var totalCommits = checkIfValueExists(project.commitsFromWomen) + checkIfValueExists(project.commitsFromMen) + checkIfValueExists(project.commitsFromNonBinary);
+        project.commitsPercentageWomen = totalCommits ? formatPercentage(checkIfValueExists(project.commitsFromWomen) /
+            (totalCommits)) : 0;
+    });
+
+    var message = 'Fewer than 5 projects reporting non-zero numbers. Please consider contributing.';
+
+    // if(_.compact(_.pluck(data, 'totalPercentageWomen')).length < 5) {
+    //     d3.select('#tableTotalForProjects').text(message);
+    // } else {
+        var topFiveTotalWomen = _.sortByOrder(data, 'totalPercentageWomen', 'desc').slice(0, 5);
+        graphTable('#tableTotalForProjects', topFiveTotalWomen, 'totalPercentageWomen');
+    // }
+    // if(_.compact(_.pluck(data, 'leadershipPercentageWomen')).length < 5) {+
+    //     d3.select('#tableLeadershipProjects').text(message);
+    // } else {
+        var topFiveLeadershipWomen = _.sortByOrder(data, 'leadershipPercentageWomen', 'desc').slice(0,5);
+        graphTable('#tableLeadershipProjects', topFiveLeadershipWomen, 'leadershipPercentageWomen');
+    // }
+    // if(_.compact(_.pluck(data, 'developersPercentageWomen')).length < 5) {
+    //     d3.select('#tableCommits').text(message);
+    // } else {
+        var topFiveDevelopersWomen = _.sortByOrder(data, 'developersPercentageWomen', 'desc').slice(0,5);
+        graphTable('#tableCommits', topFiveDevelopersWomen, 'developersPercentageWomen');
+    // }
 });

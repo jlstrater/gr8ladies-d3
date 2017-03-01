@@ -75,54 +75,46 @@
 <div class="container">
   <div>
     <ul class="nav nav-tabs">
-      <li role="presentation" class="active"><a href="#">Aggregate Data</a></li>
-      <li role="presentation"><a href="/opensource.html">Open Source Projects</a></li>
+      <li role="presentation"><a href="/index.html">Aggregate Data</a></li>
+      <li role="presentation" class="active"><a href="/opensource.html">Open Source Projects</a></li>
       <li role="presentation" class="disabled"><a href="#">By Country -- coming soon</a></li>
       <li role="presentation" class="disabled"><a href="#">By Company/Department Size -- coming soon</a></li>
     </ul>
     <div class="container">
       <br>
-      <p>Please consider contributing. Instructions are in the readme at <a href="https://github.com/jlstrater/gr8ladies-d3" target="_blank">https://github.com/jlstrater/gr8ladies-d3</a></p>
+      <p>This page uses data from the top 100 contributors to a project as seen on the github profile for example
+        <a href="https://github.com/apache/groovy/graphs/contributors" target="_blank">Apache Groovy</a>. Genders were
+        guessed using prior knowledge, profie pictures, and <a href="http://api.genderize.io">api.genderize.io</a>. Please correct me if I'm wrong.</p>
       <div class="row">
         <div class="col-sm-6">
-          <h2>Total Across All Organizations</h2>
-          <div id="pieChartTotals"></div>
+          <h2>Total Across All Projects</h2>
+          <div id="pieChartTotalForProjects"></div>
         </div>
         <div class="col-sm-6">
-          <h2>Top 5 Companies/Departments</h2>
-          <div id="tableTotals"></div>
+          <h2>Top 5 Projects</h2>
+          <div id="tableTotalForProjects"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>Total in Leadership</h2>
-          <div id="pieChartLeadership"></div>
-        </div>
-        <div class="col-sm-6">
-          <h2>Top 5 Companies/Departments</h2>
-          <div id="tableLeadership"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>Groovy Developers</h2>
-          <div id="pieChartDevelopers"></div>
-        </div>
-        <div class="col-sm-6">
-          <h2>Top 5 Companies/Departments</h2>
-          <div id="tableDevelopers"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>QA at Companies/Departments Using Groovy</h2>
-          <div id="pieChartQA"></div>
-        </div>
-        <div class="col-sm-6">
-          <h2>Top 5 Companies/Departments</h2>
-          <div id="tableQA"></div>
-        </div>
-      </div>
+      <!--<div class="row">-->
+        <!--<div class="col-sm-6">-->
+          <!--<h2>Total in Leadership/Core Contributors</h2>-->
+          <!--<div id="pieChartLeadershipProjects"></div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6">-->
+          <!--<h2>Top 5 Projects in Leadership/Core Contributors</h2>-->
+          <!--<div id="tableLeadershipProjects"></div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--<div class="col-sm-6">-->
+          <!--<h2>Total Number of Commits</h2>-->
+          <!--<div id="pieChartCommits"></div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6">-->
+          <!--<h2>Top 5 Projects by Number of Commits</h2>-->
+          <!--<div id="tableCommits"></div>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
   </div>
 </div>
