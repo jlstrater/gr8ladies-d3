@@ -11,7 +11,7 @@
     "qaWomen": 1,
     "lastUpdated": "04-JAN-2017",
     "source": "https://objectpartners.com/people/",
-    "country": "USA"
+    "country": "US"
   },
   {
     "name": "Cacoethes Software Limited",
@@ -39,7 +39,7 @@
     "qaWomen": 1,
     "lastUpdated": "17-JUL-2015",
     "source": "Employee",
-    "country": "Australia"
+    "country": "AU"
   },
   {
     "name": "ReachForce",
@@ -53,7 +53,7 @@
     "qaWomen": 1,
     "lastUpdated": "27-JUL-2015",
     "source": "Employee",
-    "country": "USA"
+    "country": "US"
   },
   {
     "name": "Kaleidos",
@@ -64,7 +64,7 @@
     "developersMen": 15,
     "developersWomen": 3,
     "source": "http://kaleidos.net/",
-    "country": "Spain",
+    "country": "ES",
     "lastUpdated": "04-JAN-2017"
   },
   {
@@ -76,7 +76,7 @@
     "developersMen": 8,
     "developersWomen": 2,
     "source": "http://www.spantree.net/team",
-    "country": "USA",
+    "country": "US",
     "lastUpdated": "04-JAN-2017"
   },
   {
@@ -90,7 +90,7 @@
     "qaMen": 7,
     "qaWomen": 4,
     "source": "employee",
-    "country": "USA",
+    "country": "US",
     "lastUpdated": "22-SEP-2015"
   },
   {
@@ -104,7 +104,17 @@
     "qaMen": 0,
     "qaWomen": 1,
     "source": "Employee",
-    "country": "USA",
+    "country": "US",
     "lastUpdated": "03-NOV-2015"
-  }
+  },
+  {
+    "name": "Zenjob",
+    "totalMen": 18,
+    "totalWomen": 10,
+    "developersMen": 5,
+    "developersWomen": 0,
+    "lastUpdated": "01-MARCH-2017",
+    "source": "https://www.zenjob.de/uber-uns",
+    "country": "DE"
+  },
 ]
