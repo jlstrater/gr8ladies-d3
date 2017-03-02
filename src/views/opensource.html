@@ -84,27 +84,24 @@
       <br>
       <p>This page uses data from the top 100 contributors to a project as seen on the github profile for example
         <a href="https://github.com/apache/groovy/graphs/contributors" target="_blank">Apache Groovy</a>. Genders were
-        guessed using prior knowledge, profie pictures, and <a href="http://api.genderize.io">api.genderize.io</a>. Please correct me if I'm wrong.</p>
+        guessed using prior knowledge, and <a href="http://api.genderize.io">api.genderize.io</a>. Please correct me if I'm wrong.
+      The link to edit the source data is <a href="https://github.com/jlstrater/gr8ladies-d3/edit/master/src/assets/data/opensource_data.json" target="_blank">here</a>.</p>
       <div class="row">
         <div class="col-sm-6">
-          <h2>Total Across All Projects</h2>
+          <h2>Total For All Projects</h2>
           <div id="pieChartTotalForProjects"></div>
         </div>
         <div class="col-sm-6">
-          <h2>Top 5 Projects</h2>
-          <div id="tableTotalForProjects"></div>
+          <h2>Projects with >1 Woman Contributor</h2>
+          <div id="pieChartProjectsPercentage"></div>
         </div>
       </div>
-      <!--<div class="row">-->
-        <!--<div class="col-sm-6">-->
-          <!--<h2>Total in Leadership/Core Contributors</h2>-->
-          <!--<div id="pieChartLeadershipProjects"></div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-6">-->
-          <!--<h2>Top 5 Projects in Leadership/Core Contributors</h2>-->
-          <!--<div id="tableLeadershipProjects"></div>-->
-        <!--</div>-->
-      <!--</div>-->
+      <div class="row">
+        <div class="col-sm-12 col-lg-8 col-lg-offset-2">
+          <h2>Table of All Projects Included</h2>
+          <div id="tableAllProjects"></div>
+        </div>
+      </div>
       <!--<div class="row">-->
         <!--<div class="col-sm-6">-->
           <!--<h2>Total Number of Commits</h2>-->
