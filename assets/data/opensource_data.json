@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Apache Groovy",
+    "totalMen": 92,
+    "totalWomen": 0,
+    "UnknownOrCompany": 8,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/apache/groovy/graphs/contributors"
+  },
+  {
+    "name": "Grails",
+    "totalMen": 95,
+    "totalWomen": 1,
+    "UnknownOrCompany": 4,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/grails/grails-core/graphs/contributors"
+  },
+  {
+    "name": "Gradle",
+    "totalMen": 95,
+    "totalWomen": 0,
+    "UnknownOrCompany": 5,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/gradle/gradle/graphs/contributors"
+  },
+  {
+    "name": "Spock",
+    "totalMen": 43,
+    "totalWomen": 1,
+    "UnknownOrCompany": 3,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/spockframework/spock/graphs/contributors"
+  },
+  {
+    "name": "Geb",
+    "totalMen": 46,
+    "totalWomen": 1,
+    "UnknownOrCompany": 2,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/geb/geb/graphs/contributors"
+  },
+  {
+    "name": "Griffon",
+    "totalMen": 16,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/griffon/griffon/graphs/contributors"
+  },
+  {
+    "name": "Ratpack",
+    "totalMen": 96,
+    "totalWomen": 0,
+    "UnknownOrCompany": 1,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/ratpack/ratpack/graphs/contributors"
+  },
+  {
+    "name": "Codenarc",
+    "totalMen": 18,
+    "totalWomen": 1,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/codenarc/codenarc/graphs/contributors"
+  },
+  {
+    "name": "GPars",
+    "totalMen": 21,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/gpars/gpars/graphs/contributors"
+  },
+  {
+    "name": "Gaelyk",
+    "totalMen": 13,
+    "totalWomen": 0,
+    "UnknownOrCompany": 2,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/gaelyk/gaelyk/graphs/contributors"
+  },
+  {
+    "name": "Grain",
+    "totalMen": 10,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/ratpack/ratpack/graphs/contributors"
+  },
+  {
+    "name": "Lazybones",
+    "totalMen": 20,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/pledbrook/lazybones/graphs/contributors"
+  },
+  {
+    "name": "GroovyFx",
+    "totalMen": 12,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/groovyfx-project/groovyfx/graphs/contributors"
+  },
+  {
+    "name": "BetaMax",
+    "totalMen": 14,
+    "totalWomen": 0,
+    "UnknownOrCompany": 3,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/betamaxteam/betamax/graphs/contributors"
+  },
+  {
+    "name": "RxGroovy",
+    "totalMen": 10,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/ReactiveX/RxGroovy/graphs/contributors"
+  },
+  {
+    "name": "GrooScript",
+    "totalMen": 7,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "01-MAR-2017",
+    "source": "https://github.com/chiquitinxx/grooscript/graphs/contributors"
+  }
+]
