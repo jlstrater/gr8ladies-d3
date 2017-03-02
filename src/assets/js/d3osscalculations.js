@@ -30,6 +30,8 @@ d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/ass
 
     graphPieChart('#pieChartProjectsPercentage', percentageOfProjectsWithWomenContributors);
 
+    data = _.sortByOrder(data, 'name');
+
     _.each(data, function (project) {
         var totalContributors = checkIfValueExists(project.totalWomen) + checkIfValueExists(project.totalMen) + checkIfValueExists(project.UnknownOrCompany);
         project.totalContributorsWithUnknown = totalContributors;

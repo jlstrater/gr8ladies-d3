@@ -52,6 +52,8 @@ d3.json("https://raw.githubusercontent.com/jlstrater/gr8ladies-d3/master/src/ass
             (totalQA)) : 0;
     });
 
+    data = _.sortByOrder(data, 'name');
+
     if(_.compact(_.pluck(data, 'totalPercentageWomen')).length < 5) {
         d3.select('#tableTotals').text('Fewer than 5 Companies Reporting. Please consider contributing.');
     } else {
