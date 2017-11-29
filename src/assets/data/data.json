@@ -108,17 +108,17 @@
     "lastUpdated": "03-NOV-2015"
   },
   {
-    "name": "Zenjob",
-    "totalMen": 18,
-    "totalWomen": 10,
-    "leadershipMen": 0,
-    "leadershipWomen": 0,
-    "developersMen": 5,
-    "developersWomen": 0,
+    "name": "anonymous",
+    "totalMen": 108,
+    "totalWomen": 42,
+    "leadershipMen": 10,
+    "leadershipWomen": 2,
+    "developersMen": 17,
+    "developersWomen": 1,
     "qaMen": 0,
-    "qaWomen": 0,
-    "lastUpdated": "01-MARCH-2017",
-    "source": "https://www.zenjob.de/uber-uns",
+    "qaWomen": 1,
+    "lastUpdated": "29-November-2017",
+    "source": "current employee",
     "country": "DE"
   }
 ]
