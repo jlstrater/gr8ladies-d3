@@ -4,7 +4,7 @@
     "totalMen": 92,
     "totalWomen": 0,
     "UnknownOrCompany": 8,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/apache/groovy/graphs/contributors"
   },
   {
@@ -12,31 +12,31 @@
     "totalMen": 95,
     "totalWomen": 1,
     "UnknownOrCompany": 4,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/grails/grails-core/graphs/contributors"
   },
   {
     "name": "Gradle",
-    "totalMen": 95,
+    "totalMen": 97,
     "totalWomen": 0,
-    "UnknownOrCompany": 5,
-    "lastUpdated": "01-MAR-2017",
+    "UnknownOrCompany": 3,
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/gradle/gradle/graphs/contributors"
   },
   {
     "name": "Spock",
-    "totalMen": 43,
+    "totalMen": 53,
     "totalWomen": 1,
-    "UnknownOrCompany": 3,
-    "lastUpdated": "01-MAR-2017",
+    "UnknownOrCompany": 2,
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/spockframework/spock/graphs/contributors"
   },
   {
     "name": "Geb",
-    "totalMen": 46,
-    "totalWomen": 1,
-    "UnknownOrCompany": 2,
-    "lastUpdated": "01-MAR-2017",
+    "totalMen": 50,
+    "totalWomen": 2,
+    "UnknownOrCompany": 1,
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/geb/geb/graphs/contributors"
   },
   {
@@ -44,31 +44,31 @@
     "totalMen": 16,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/griffon/griffon/graphs/contributors"
   },
   {
     "name": "Ratpack",
-    "totalMen": 96,
+    "totalMen": 98,
     "totalWomen": 0,
-    "UnknownOrCompany": 1,
-    "lastUpdated": "01-MAR-2017",
+    "UnknownOrCompany": 2,
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/ratpack/ratpack/graphs/contributors"
   },
   {
     "name": "Codenarc",
-    "totalMen": 18,
+    "totalMen": 23,
     "totalWomen": 1,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/codenarc/codenarc/graphs/contributors"
   },
   {
     "name": "GPars",
-    "totalMen": 21,
-    "totalWomen": 0,
+    "totalMen":22,
+    "totalWomen": 1,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/gpars/gpars/graphs/contributors"
   },
   {
@@ -76,23 +76,23 @@
     "totalMen": 13,
     "totalWomen": 0,
     "UnknownOrCompany": 2,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/gaelyk/gaelyk/graphs/contributors"
   },
   {
     "name": "Grain",
-    "totalMen": 10,
+    "totalMen": 13,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
-    "source": "https://github.com/ratpack/ratpack/graphs/contributors"
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/sysgears/grain/graphs/contributors"
   },
   {
     "name": "Lazybones",
     "totalMen": 20,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/pledbrook/lazybones/graphs/contributors"
   },
   {
@@ -100,15 +100,15 @@
     "totalMen": 12,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/groovyfx-project/groovyfx/graphs/contributors"
   },
   {
     "name": "BetaMax",
-    "totalMen": 14,
+    "totalMen": 17,
     "totalWomen": 0,
-    "UnknownOrCompany": 3,
-    "lastUpdated": "01-MAR-2017",
+    "UnknownOrCompany": 2,
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/betamaxteam/betamax/graphs/contributors"
   },
   {
@@ -116,7 +116,7 @@
     "totalMen": 10,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/ReactiveX/RxGroovy/graphs/contributors"
   },
   {
@@ -124,7 +124,7 @@
     "totalMen": 7,
     "totalWomen": 0,
     "UnknownOrCompany": 0,
-    "lastUpdated": "01-MAR-2017",
+    "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/chiquitinxx/grooscript/graphs/contributors"
   }
 ]
