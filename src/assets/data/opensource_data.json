@@ -158,5 +158,29 @@
     "UnknownOrCompany": 5,
     "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/jenkinsci/job-dsl-plugin/graphs/contributors"
+  },
+  {
+    "name": "Gradle Shadow Plugin",
+    "totalMen": 25,
+    "totalWomen": 1,
+    "UnknownOrCompany": 1,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/johnrengelman/shadow/graphs/contributors"
+  },
+  {
+    "name": "Groovy Android Gradle Plugin",
+    "totalMen": 16,
+    "totalWomen": 0,
+    "UnknownOrCompany": 2,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/groovy/groovy-android-gradle-plugin/graphs/contributors"
+  },
+  {
+    "name": "Gradle Git Plugin",
+    "totalMen": 20,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/ajoberstar/gradle-git/graphs/contributors"
   }
 ]
