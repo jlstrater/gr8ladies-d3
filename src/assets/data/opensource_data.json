@@ -126,5 +126,37 @@
     "UnknownOrCompany": 0,
     "lastUpdated": "30-NOV-2017",
     "source": "https://github.com/chiquitinxx/grooscript/graphs/contributors"
+  },
+  {
+    "name": "Netflix Asgard",
+    "totalMen": 21,
+    "totalWomen": 0,
+    "UnknownOrCompany": 0,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/Netflix/asgard/graphs/contributors"
+  },
+  {
+    "name": "Rundeck",
+    "totalMen": 75,
+    "totalWomen": 1,
+    "UnknownOrCompany": 6,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/rundeck/rundeck/graphs/contributors"
+  },
+  {
+    "name": "Springfox",
+    "totalMen": 94,
+    "totalWomen": 1,
+    "UnknownOrCompany": 5,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/springfox/springfox/graphs/contributors"
+  },
+  {
+    "name": "Jenkin Jobs DSL",
+    "totalMen": 95,
+    "totalWomen": 0,
+    "UnknownOrCompany": 5,
+    "lastUpdated": "30-NOV-2017",
+    "source": "https://github.com/jenkinsci/job-dsl-plugin/graphs/contributors"
   }
 ]
